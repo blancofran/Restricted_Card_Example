@@ -1,0 +1,34 @@
+title: Casa
+views:
+  - path: default_view
+    title: Home
+    cards:
+      - show_name: true
+        show_icon: true
+        type: custom:restriction-card
+        duration: 5
+        restrictions:
+          pin:
+            code: 1234
+            text: Ingrese el código para abrir el portón
+        card:
+          type: button
+          tap_action:
+            action: toggle
+          entity: cover.esphome_web_b1cce9_garage_door
+          name: Puerta Garaje
+
+          
+      - show_name: true
+        show_icon: true
+        type: custom:restriction-card
+        duration: 5
+        restrictions:
+          confirm:
+            text: ¿Está seguro que desea desbloquear la tarjeta?
+        card:
+          type: button
+          tap_action:
+            action: toggle
+          entity: cover.esphome_web_b1cce9_garage_door
+          name: Puerta Garaje
